@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:21.0
+    # 25.xはまだ利用できない:2024-09-30
+    image: quay.io/keycloak/keycloak:24.0
     container_name: idp
     restart: always
     command: start-dev --import-realm
@@ -16,7 +17,7 @@ services:
       - ./keycloak/import:/opt/keycloak/data/import/:ro
   proxy:
     container_name: proxy
-    image: nginx:1.23
+    image: nginx:1.27
     restart: always
     environment:
       OIDC_ISSUER: "http://localhost:8080/realms/develop"
