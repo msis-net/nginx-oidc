@@ -1,5 +1,7 @@
 # nginx-oidc
 
+[https://qiita.com/ydclab_P002/items/b49ed23ca7b2532fcce2](https://qiita.com/ydclab_P002/items/b49ed23ca7b2532fcce2)
+
 ```bash
 .
 ├── backend/ # WEB サーバ
